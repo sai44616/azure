@@ -1,0 +1,27 @@
+{
+	"name": "blobdataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blobConnect",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "file_@{formatDateTime(utcnow(), 'yyyy-MM-dd')}.csv",
+					"type": "Expression"
+				},
+				"container": "multifiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

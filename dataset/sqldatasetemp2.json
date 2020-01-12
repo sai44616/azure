@@ -1,0 +1,17 @@
+{
+	"name": "sqldatasetemp2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqldataset4multitables",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
